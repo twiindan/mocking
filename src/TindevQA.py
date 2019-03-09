@@ -29,7 +29,7 @@ class TindevQA():
         elif person1 not in person2['likes'] and person1 not in person2['dislikes']:
             self.give_it_time(person1)
 
-    def let_down_gently(self):
+    def let_down_gently(self, person1):
         print('Podemos ser amigos')
 
     def send_email(self, person1):
