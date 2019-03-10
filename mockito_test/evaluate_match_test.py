@@ -1,7 +1,4 @@
-from mock import patch, call
-from mockito import spy
 from mockito import verify
-from mockito import verifyZeroInteractions
 from mockito import when, mock
 
 from src.TindevQA import TindevQA
@@ -59,9 +56,7 @@ def test_person2_likes_person1():
                'likes': ['Han Solo'],
                'dislikes': ['Luke']}
 
-    when(app).let_down_gently(person1)
     when(app).send_email(...)
-    when(app).give_it_time(...)
 
     app.evaluate(person1, person2)
 
