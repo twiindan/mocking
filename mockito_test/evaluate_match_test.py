@@ -1,5 +1,5 @@
 from mockito import verify
-from mockito import when, mock
+from mockito import when
 
 from src.TindevQA import TindevQA
 

@@ -1,5 +1,5 @@
 from src.TindevQA import TindevQA
-from mockito import when, mock, unstub
+from mockito import when
 
 
 def test_new_person_decorator():

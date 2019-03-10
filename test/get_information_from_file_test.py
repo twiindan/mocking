@@ -1,5 +1,3 @@
-import json
-
 from mock import patch, Mock
 
 from src.TindevQA import TindevQA

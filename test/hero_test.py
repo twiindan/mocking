@@ -1,4 +1,3 @@
-import pytest
 from unittest.mock import sentinel
 
 from src.dummy import SuperHero
