@@ -1,6 +1,6 @@
 import json
 
-from bottle import run, template, Bottle, request, response, auth_basic, redirect, static_file, TEMPLATE_PATH
+from bottle import run, Bottle, request, response
 
 app = Bottle()
 requests_handled = []
