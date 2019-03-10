@@ -48,10 +48,8 @@ def test_person2_dislikes_person1_multiple_mocks(mock_let_down, mock_send_mail, 
     assert mock_give_it_time.call_count == 0
 
 
-@patch.object(TindevQA, "give_it_time")
 @patch.object(TindevQA, "send_email")
-@patch.object(TindevQA, "let_down_gently")
-def test_person2_likes_person1(mock_let_down, mock_send_mail, mock_give_it_time):
+def test_person2_likes_person1( mock_send_mail):
 
     app = TindevQA()
     person1 = 'Han Solo'
