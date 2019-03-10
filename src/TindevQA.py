@@ -2,6 +2,7 @@ import json
 import random
 import requests
 from requests import Timeout
+from src.configuration import URL
 
 
 class TindevQA():
@@ -49,9 +50,9 @@ class TindevQA():
     def send_sms(self, user, text, to=34677722314):
 
         try:
-            body = {'from': user, 'text': text, 'to': '34677722314',
+            body = {'from': user, 'text': text, 'to': to,
                     'api_key': 'fa93366b', 'api_secret': 't6WYC4aIry8JNM9T'}
-            r = requests.post(url="https://rest.nexmo.com/sms/json", data=body)
+            r = requests.post(url=URL, data=body)
             return r
         except Timeout:
             return "ERROR"
