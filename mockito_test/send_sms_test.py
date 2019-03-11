@@ -7,7 +7,7 @@ from src.TindevQA import TindevQA
 
 def test_send_sms_with_mockito():
     app = TindevQA()
-    user = 'Chewaka'
+    user = 'Chewbacca'
     text = 'Quieres enredarte entre mis pelos?'
     response_mock = mock({'status_code': 200, 'text': 'Ok'})
     when(requests).post(...).thenReturn(response_mock)
@@ -18,7 +18,7 @@ def test_send_sms_with_mockito():
 
 def test_send_sms_get_500_error():
     app = TindevQA()
-    user = 'Chewaka'
+    user = 'Chewbacca'
     text = 'Quieres enredarte entre mis pelos?'
     response_mock = mock({'status_code': 501})
     when(requests).post(...).thenReturn(response_mock)
@@ -29,7 +29,7 @@ def test_send_sms_get_500_error():
 
 def test_send_sms_get_timeout():
     app = TindevQA()
-    user = 'Chewaka'
+    user = 'Chewbacca'
     text = 'Quieres enredarte entre mis pelos?'
     when(requests).post(...).thenRaise(Timeout)
 
