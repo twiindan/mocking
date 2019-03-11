@@ -2,7 +2,7 @@ import json
 import random
 import requests
 from requests import Timeout
-from src.configuration import URL
+from src.configuration import URL, NEXMO_API_KEY, NEXMO_API_SECRET, DEFAULT_PHONE_NUMBER
 
 
 class TindevQA():
@@ -47,11 +47,11 @@ class TindevQA():
         except (IOError, ValueError):
             return "ERROR"
 
-    def send_sms(self, user, text, to=34677722314):
+    def send_sms(self, user, text, to=DEFAULT_PHONE_NUMBER):
 
         try:
             body = {'from': user, 'text': text, 'to': to,
-                    'api_key': 'fa93366b', 'api_secret': 't6WYC4aIry8JNM9T'}
+                    'api_key': NEXMO_API_KEY, 'api_secret': NEXMO_API_SECRET}
             r = requests.post(url=URL, data=body)
             return r
         except Timeout:
